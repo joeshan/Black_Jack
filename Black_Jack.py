@@ -6,7 +6,14 @@ class player:
     def __str__(self):
         return 'Play %s has %s chips.' % (self.name, str(self.chip))
 
-  
+class card:
+    def __init__(self, suit, rank):
+        self.suit = suit
+        self.rank = rank
+    
+    def __str__(self):
+        return self.suit + self.rank
+    
 def join_game(players):
     join = True
     while len(players)<6 and join == True:
