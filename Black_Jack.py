@@ -53,12 +53,14 @@ class hand:
     
     def show_hand(self, hidden):
         if hidden == True:
-            print('Hidden card')
-            for c in self.hand_cards[1:]:
-                print(c)
+            print('Hidden card, ', end="")
+            for c in self.hand_cards[1:len(self.hand_cards)-2]:
+                print(c, end=", ")
+            print(self.hand_cards[-1])
         else:
-            for c in self.hand_cards:
-                print(c)
+            for c in self.hand_cards[:len(self.hand_cards)-2]:
+                print(c, end=", ")
+            print(self.hand_cards[-1])
     
     def cal_value(self):
         self.value = 0
