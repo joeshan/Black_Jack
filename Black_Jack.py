@@ -103,9 +103,9 @@ def make_bet(players):
                     bet[player.name] = int(bet_tmp)
                     break
                 else:
-                    print('Invalid bet!a')
+                    print('Invalid bet! The bet amount must be between 0 and your balance.')
             except:
-                print('Invalid bet!b')
+                print('The bet amout must be an integer!')
                 
     print('\nFinished betting')
     for player in players:
