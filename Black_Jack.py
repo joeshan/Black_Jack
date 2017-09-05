@@ -152,7 +152,6 @@ def adjust_chips(player, bet, win_flag):
 
         
 def check_win(dealer, player): # check who wins if no bust
-    global bet
     dealer_value = dealer.hand.cal_value()
     player_value = player.hand.cal_value()
     
@@ -310,14 +309,13 @@ def game_steps():
             if str(next_round)[0].upper() == 'N':
                 players.remove(player)
     
-#####################                   
+                    
 #### game starts ####
-#####################
 import random  
 initialization()
 
 while True:
-    if len(player) == 0:
+    if len(players) == 0:
         break
     
     if str(restart)[0].upper() == 'Y':
